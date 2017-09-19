@@ -26,9 +26,7 @@
     nav = [[RTNavigationBar alloc] initWithFrame:(CGRect){0,0,375,64}];
     nav.backgroundColor = [UIColor redColor];
     nav.barTintColor = [UIColor whiteColor];
-    UINavigationItem* item = [[UINavigationItem alloc] initWithTitle:@">=iOS11"];
-    
-    [nav pushNavigationItem:item animated:NO];
+
     [self.view addSubview:nav];
     
     [self setupNavigationItem];
@@ -41,16 +39,16 @@
 
 - (void)setupNavigationItem {
     //TODO: 给导航条添加Item
-    navigationItem = [[UINavigationItem alloc] initWithTitle:@""];
+    navigationItem = [[UINavigationItem alloc] initWithTitle:@">=iOS11"];
+    
     UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
     [left setFrame:CGRectMake(0, 0, 40, 40)];
     [left setImage:[[UIImage imageNamed:@"common_btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [left setImageEdgeInsets:UIEdgeInsetsMake(0, /*0*/-23, 0, 0)];
     UIBarButtonItem* leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
     [navigationItem setLeftBarButtonItem:leftBtn animated:NO];
-    [nav pushNavigationItem:navigationItem animated:NO];
     
-    [self.view addSubview:nav];
+    [nav pushNavigationItem:navigationItem animated:NO];
 }
 
 /*
