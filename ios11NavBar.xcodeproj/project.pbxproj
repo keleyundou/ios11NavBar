@@ -10,6 +10,7 @@
 		9F4786F91F0B4788002AF3E3 /* RTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4786F81F0B4788002AF3E3 /* RTNavigationBar.m */; };
 		9FA29B8D1F0B6BA200BF6454 /* OldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA29B8C1F0B6BA200BF6454 /* OldViewController.m */; };
 		9FA29B901F0B6BAE00BF6454 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA29B8F1F0B6BAE00BF6454 /* NewViewController.m */; };
+		9FB4EBA01F70F6AE0079123B /* RTDeviceHardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB4EB9F1F70F6AE0079123B /* RTDeviceHardware.m */; };
 		9FF99CB81F0B31D9005FBCD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF99CB71F0B31D9005FBCD6 /* AppDelegate.m */; };
 		9FF99CBB1F0B31D9005FBCD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF99CBA1F0B31D9005FBCD6 /* ViewController.m */; };
 		9FF99CBE1F0B31D9005FBCD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF99CBC1F0B31D9005FBCD6 /* Main.storyboard */; };
@@ -44,6 +45,8 @@
 		9FA29B8C1F0B6BA200BF6454 /* OldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldViewController.m; sourceTree = "<group>"; };
 		9FA29B8E1F0B6BAE00BF6454 /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
 		9FA29B8F1F0B6BAE00BF6454 /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		9FB4EB9E1F70F6AE0079123B /* RTDeviceHardware.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTDeviceHardware.h; sourceTree = "<group>"; };
+		9FB4EB9F1F70F6AE0079123B /* RTDeviceHardware.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTDeviceHardware.m; sourceTree = "<group>"; };
 		9FF99CB31F0B31D9005FBCD6 /* ios11NavBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios11NavBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF99CB61F0B31D9005FBCD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9FF99CB71F0B31D9005FBCD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				9FA29B8F1F0B6BAE00BF6454 /* NewViewController.m */,
 				9F4786F71F0B4788002AF3E3 /* RTNavigationBar.h */,
 				9F4786F81F0B4788002AF3E3 /* RTNavigationBar.m */,
+				9FB4EB9E1F70F6AE0079123B /* RTDeviceHardware.h */,
+				9FB4EB9F1F70F6AE0079123B /* RTDeviceHardware.m */,
 				9FF99CBC1F0B31D9005FBCD6 /* Main.storyboard */,
 				9FF99CBF1F0B31D9005FBCD6 /* Assets.xcassets */,
 				9FF99CC11F0B31D9005FBCD6 /* LaunchScreen.storyboard */,
@@ -280,6 +285,7 @@
 				9FF99CBB1F0B31D9005FBCD6 /* ViewController.m in Sources */,
 				9FF99CC61F0B31D9005FBCD6 /* main.m in Sources */,
 				9FA29B8D1F0B6BA200BF6454 /* OldViewController.m in Sources */,
+				9FB4EBA01F70F6AE0079123B /* RTDeviceHardware.m in Sources */,
 				9FA29B901F0B6BAE00BF6454 /* NewViewController.m in Sources */,
 				9FF99CB81F0B31D9005FBCD6 /* AppDelegate.m in Sources */,
 				9F4786F91F0B4788002AF3E3 /* RTNavigationBar.m in Sources */,
@@ -443,7 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GTDE2Y8A32;
 				INFOPLIST_FILE = ios11NavBar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uniqueness.ios11NavBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -457,7 +463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GTDE2Y8A32;
 				INFOPLIST_FILE = ios11NavBar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uniqueness.ios11NavBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";

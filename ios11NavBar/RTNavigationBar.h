@@ -10,4 +10,6 @@
 
 @interface RTNavigationBar : UINavigationBar
 
+@property (class, readonly, strong) RTNavigationBar *defaultBar;
+
 @end

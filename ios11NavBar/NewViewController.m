@@ -8,6 +8,7 @@
 
 #import "NewViewController.h"
 #import "RTNavigationBar.h"
+
 @interface NewViewController ()
 {
     UINavigationBar *nav;
@@ -20,10 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController setNavigationBarHidden:YES];
+    self.view.backgroundColor = [UIColor brownColor];
     
-    nav = [[RTNavigationBar alloc] initWithFrame:(CGRect){0,0,375,64}];
+    nav = [RTNavigationBar defaultBar];
     nav.backgroundColor = [UIColor redColor];
     nav.barTintColor = [UIColor whiteColor];
 
@@ -45,10 +49,15 @@
     [left setFrame:CGRectMake(0, 0, 40, 40)];
     [left setImage:[[UIImage imageNamed:@"common_btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [left setImageEdgeInsets:UIEdgeInsetsMake(0, /*0*/-23, 0, 0)];
+    [left addTarget:self action:@selector(onBack:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem* leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
     [navigationItem setLeftBarButtonItem:leftBtn animated:NO];
     
     [nav pushNavigationItem:navigationItem animated:NO];
+}
+
+- (void)onBack:(UIButton *)sender {
+    NSLog(@"touch onBack");
 }
 
 /*

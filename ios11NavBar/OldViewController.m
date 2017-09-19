@@ -19,8 +19,8 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController setNavigationBarHidden:YES];
-    
-    UINavigationBar *nav = [[UINavigationBar alloc] initWithFrame:(CGRect){0,0,375,64}];
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    UINavigationBar *nav = [[UINavigationBar alloc] initWithFrame:(CGRect){0,0,screenWidth,64}];
     nav.backgroundColor = [UIColor redColor];
     nav.barTintColor = [UIColor greenColor];
     UINavigationItem* item = [[UINavigationItem alloc] initWithTitle:@"<iOS11"];

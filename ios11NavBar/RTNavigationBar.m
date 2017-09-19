@@ -7,28 +7,27 @@
 //
 
 #import "RTNavigationBar.h"
+#import "RTDeviceHardware.h"
 
 @implementation RTNavigationBar
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        
-    }
-    return self;
++ (RTNavigationBar *)defaultBar {
+    RTNavigationBar *nav = nil;
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    BOOL ret = [[RTDeviceHardware platformString] isEqualToString:@"iPhone X"];
+    nav = [[RTNavigationBar alloc] initWithFrame:(CGRect){0, ret?44:20, screenWidth ,44}];
+    return nav;
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    if ([[UIDevice currentDevice].systemVersion floatValue] >= 11.0) {
-        for (UIView *aView in self.subviews) {
-            if ([NSStringFromClass([aView class]) isEqualToString:@"_UINavigationBarContentView"]) {
-                aView.frame = CGRectMake(0, 20, CGRectGetWidth(aView.frame), CGRectGetHeight(aView.frame));
-            } else {
-                aView.frame = CGRectMake(0, 0, CGRectGetWidth(aView.frame), CGRectGetHeight(self.frame));
-            }
+#if TARGET_OS_IOS
+    for (UIView *aView in self.subviews) {
+        if ([@[@"_UINavigationBarBackground", @"_UIBarBackground"] containsObject:NSStringFromClass([aView class])]) {
+            aView.frame = CGRectMake(0, -CGRectGetMinY(self.frame), CGRectGetWidth(self.frame), CGRectGetHeight(self.frame)+CGRectGetMinY(self.frame));
         }
     }
+#endif
     
 }
 
