@@ -9,7 +9,10 @@
 #import "NewViewController.h"
 #import "RTNavigationBar.h"
 @interface NewViewController ()
-
+{
+    UINavigationBar *nav;
+    UINavigationItem *navigationItem;
+}
 @end
 
 @implementation NewViewController
@@ -20,18 +23,34 @@
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController setNavigationBarHidden:YES];
     
-    UINavigationBar *nav = [[RTNavigationBar alloc] initWithFrame:(CGRect){0,0,375,64}];
+    nav = [[RTNavigationBar alloc] initWithFrame:(CGRect){0,0,375,64}];
     nav.backgroundColor = [UIColor redColor];
-    nav.barTintColor = [UIColor greenColor];
+    nav.barTintColor = [UIColor whiteColor];
     UINavigationItem* item = [[UINavigationItem alloc] initWithTitle:@">=iOS11"];
     
     [nav pushNavigationItem:item animated:NO];
     [self.view addSubview:nav];
+    
+    [self setupNavigationItem];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)setupNavigationItem {
+    //TODO: 给导航条添加Item
+    navigationItem = [[UINavigationItem alloc] initWithTitle:@""];
+    UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
+    [left setFrame:CGRectMake(0, 0, 40, 40)];
+    [left setImage:[[UIImage imageNamed:@"common_btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
+    [left setImageEdgeInsets:UIEdgeInsetsMake(0, /*0*/-23, 0, 0)];
+    UIBarButtonItem* leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
+    [navigationItem setLeftBarButtonItem:leftBtn animated:NO];
+    [nav pushNavigationItem:navigationItem animated:NO];
+    
+    [self.view addSubview:nav];
 }
 
 /*
