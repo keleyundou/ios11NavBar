@@ -22,20 +22,37 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController setNavigationBarHidden:YES];
     self.view.backgroundColor = [UIColor brownColor];
-    
     nav = [RTNavigationBar defaultBar];
     nav.backgroundColor = [UIColor redColor];
     nav.barTintColor = [UIColor whiteColor];
-
+    
     [self.view addSubview:nav];
     
     [self setupNavigationItem];
-    
+
+    //crash.
+//    UIView *greenView = [UIView new];
+//    greenView.translatesAutoresizingMaskIntoConstraints = NO;
+//
+//    UILayoutGuide *margins = self.view.layoutMarginsGuide;
+//    [NSLayoutConstraint activateConstraints:
+//     @[
+//       [greenView.leadingAnchor constraintEqualToAnchor:margins.leadingAnchor],
+//       [greenView.trailingAnchor constraintEqualToAnchor:margins.trailingAnchor],
+//       ]];
+//
+//    if (@available(iOS 11, *)) {
+//        UILayoutGuide *guide = self.view.safeAreaLayoutGuide;
+//        [NSLayoutConstraint activateConstraints:
+//         @[
+//           [greenView.topAnchor constraintEqualToSystemSpacingBelowAnchor:guide.topAnchor multiplier:1.0],
+//           [guide.bottomAnchor constraintEqualToSystemSpacingBelowAnchor:greenView.bottomAnchor multiplier:1.0]
+//           ]];
+//    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,6 +64,21 @@
     UIViewController *vc = [[NextViewController alloc] init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    NSLog(@"DidLayout-containerView: %@", NSStringFromCGRect(self.view.frame));
+    
+}
+
+- (void)viewSafeAreaInsetsDidChange {
+    [super viewSafeAreaInsetsDidChange];
+    if (@available(iOS 11.0, *)) {
+        NSLog(@"viewSafeAreaInsetsDidChange:%@", NSStringFromUIEdgeInsets(self.view.safeAreaInsets));
+    } else {
+        // Fallback on earlier versions
+    }
 }
 
 - (void)setupNavigationItem {

@@ -14,18 +14,18 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NewViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YDu-Jp-HXs"/>
-                        <viewControllerLayoutGuide type="bottom" id="iPG-Zq-kAA"/>
+                        <viewControllerLayoutGuide type="top" id="WAa-bs-mJW"/>
+                        <viewControllerLayoutGuide type="bottom" id="gRE-43-Vbq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycv-i0-ogL">
-                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycv-i0-ogL" userLabel="Home Indicator">
+                                <rect key="frame" x="0.0" y="633" width="375" height="34"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="VEW-hw-lWz"/>
+                                    <constraint firstAttribute="height" constant="34" id="VEW-hw-lWz"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -47,8 +47,8 @@
             <objects>
                 <viewController id="o0n-UY-UH7" customClass="OldViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dSR-Hh-Yq9"/>
-                        <viewControllerLayoutGuide type="bottom" id="Vsy-EP-dfA"/>
+                        <viewControllerLayoutGuide type="top" id="z2o-9j-bVR"/>
+                        <viewControllerLayoutGuide type="bottom" id="U9v-kE-WOV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ScJ-Fc-kRs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -66,8 +66,8 @@
             <objects>
                 <viewController id="Lle-XC-rBV" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AhU-wh-KIR"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ioc-nE-utQ"/>
+                        <viewControllerLayoutGuide type="top" id="p5W-TD-kF5"/>
+                        <viewControllerLayoutGuide type="bottom" id="XNc-KU-l6q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="12g-XB-Jpb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>

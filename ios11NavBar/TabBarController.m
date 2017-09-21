@@ -7,11 +7,24 @@
 //
 
 #import "TabBarController.h"
+#import "RTDeviceHardware.h"
+
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
 @implementation TabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    //TODO: adapt tabbar's y value.
+    if ([RTDeviceHardware iPhoneXDevice]) {
+        CGFloat deltaTabBarY = SCREEN_HEIGHT - CGRectGetHeight(self.tabBar.frame);
+        self.tabBar.frame = (CGRect){0, deltaTabBarY, self.tabBar.bounds.size};
+    }
 }
 
 @end
