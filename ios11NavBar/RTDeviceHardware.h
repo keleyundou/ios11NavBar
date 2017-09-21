@@ -12,4 +12,6 @@
 
 + (NSString *)platformString;
 
++ (BOOL)iPhoneXDevice;
+
 @end

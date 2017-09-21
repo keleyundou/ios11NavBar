@@ -14,7 +14,7 @@
 + (RTNavigationBar *)defaultBar {
     RTNavigationBar *nav = nil;
     CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    BOOL ret = [[RTDeviceHardware platformString] isEqualToString:@"iPhone X"];
+    BOOL ret = [RTDeviceHardware iPhoneXDevice];
     nav = [[RTNavigationBar alloc] initWithFrame:(CGRect){0, ret?44:20, screenWidth ,44}];
     return nav;
 }

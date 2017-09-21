@@ -9,6 +9,8 @@
 #import "RTDeviceHardware.h"
 #import <sys/utsname.h>
 
+@import UIKit;
+
 @implementation RTDeviceHardware
 
 + (NSString *)deviceName
@@ -22,6 +24,17 @@
         deviceName = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
     }
     return deviceName;
+}
+
++ (BOOL)iPhoneXDevice {
+    NSString *platform = [self platformString];
+    if ([platform isEqualToString:@"iPhone X"] ||
+        //TODO: https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/
+        //iPhone X Portrait size: 1125px x 2436px
+    ([platform isEqualToString:@"Simulator"] && ([UIScreen mainScreen].bounds.size.height == 812))) {
+        return YES;
+    }
+    return NO;
 }
 
 + (NSString *)platformString {
@@ -66,8 +79,7 @@
     if ([@[@"iPad6,11", @"iPad6,12"] containsObject:platform])    return @"iPad 5";
     if ([@[@"iPad7,1", @"iPad7,2"] containsObject:platform])    return @"iPad Pro (12.9-inch, 2nd generation)";
     if ([@[@"iPad7,3", @"iPad7,4"] containsObject:platform])    return @"iPad Pro (10.5-inch)";
-    if ([platform isEqualToString:@"i386"])         return @"Simulator";
-    if ([platform isEqualToString:@"x86_64"])       return @"Simulator";
+    if ([@[@"i386", @"x86_64"] containsObject:platform])        return @"Simulator";
     return platform;
 }
 

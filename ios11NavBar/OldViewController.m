@@ -27,6 +27,7 @@
     
     [nav pushNavigationItem:item animated:NO];
     [self.view addSubview:nav];
+    self.view.backgroundColor = [UIColor blueColor];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,7 @@
 
 #import "NewViewController.h"
 #import "RTNavigationBar.h"
+#import "NextViewController.h"
 
 @interface NewViewController ()
 {
@@ -34,6 +35,7 @@
     [self.view addSubview:nav];
     
     [self setupNavigationItem];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,10 +43,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    UIViewController *vc = [[NextViewController alloc] init];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 - (void)setupNavigationItem {
     //TODO: 给导航条添加Item
     navigationItem = [[UINavigationItem alloc] initWithTitle:@">=iOS11"];
-    
     UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
     [left setFrame:CGRectMake(0, 0, 40, 40)];
     [left setImage:[[UIImage imageNamed:@"common_btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
