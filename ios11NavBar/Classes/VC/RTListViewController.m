@@ -117,6 +117,7 @@
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 0.1)];
         //TODO: iOS 11之后，预估值有默认高度，如果不需要就设置0
+        _tableView.estimatedRowHeight = 0;//这里需要吐槽下，如果不设置为0 就会出现刷新后偏移问题。
         _tableView.estimatedSectionHeaderHeight = 0;
         _tableView.estimatedSectionFooterHeight = 0;
         _tableView.tableHeaderView = v;
