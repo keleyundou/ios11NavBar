@@ -1,18 +1,18 @@
 //
-//  OldViewController.m
+//  RTOldViewController.m
 //  ios11NavBar
 //
 //  Created by ColaBean on 2017/7/4.
 //  Copyright © 2017年 ColaBean. All rights reserved.
 //
 
-#import "OldViewController.h"
+#import "RTOldViewController.h"
 
-@interface OldViewController ()
+@interface RTOldViewController ()
 
 @end
 
-@implementation OldViewController
+@implementation RTOldViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

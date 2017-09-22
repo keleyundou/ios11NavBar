@@ -1,18 +1,18 @@
 //
-//  TabBarController.m
+//  RTTabBarController.m
 //  ios11NavBar
 //
 //  Created by ColaBean on 2017/9/21.
 //  Copyright © 2017年 ColaBean. All rights reserved.
 //
 
-#import "TabBarController.h"
+#import "RTTabBarController.h"
 #import "RTDeviceHardware.h"
 
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 
-@implementation TabBarController
+@implementation RTTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

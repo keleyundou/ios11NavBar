@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F24E0611F73525B00F82BDF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F24E0601F73525B00F82BDF /* TabBarController.m */; };
+		9F24E0611F73525B00F82BDF /* RTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F24E0601F73525B00F82BDF /* RTTabBarController.m */; };
 		9F4000931F72623000FB03A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4000911F72623000FB03A8 /* LaunchScreen.storyboard */; };
 		9F4786F91F0B4788002AF3E3 /* RTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4786F81F0B4788002AF3E3 /* RTNavigationBar.m */; };
-		9FA29B8D1F0B6BA200BF6454 /* OldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA29B8C1F0B6BA200BF6454 /* OldViewController.m */; };
-		9FA29B901F0B6BAE00BF6454 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA29B8F1F0B6BAE00BF6454 /* NewViewController.m */; };
+		9F90DAEF1F74C5840050C3C3 /* RTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F90DAEB1F74C5840050C3C3 /* RTDetailViewController.m */; };
+		9F90DAF01F74C5840050C3C3 /* RTListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F90DAEC1F74C5840050C3C3 /* RTListViewController.m */; };
+		9F90DAF61F74C7F90050C3C3 /* RTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F90DAF51F74C7F90050C3C3 /* RTBaseViewController.m */; };
+		9FA29B8D1F0B6BA200BF6454 /* RTOldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA29B8C1F0B6BA200BF6454 /* RTOldViewController.m */; };
+		9FA29B901F0B6BAE00BF6454 /* RTNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FA29B8F1F0B6BAE00BF6454 /* RTNewViewController.m */; };
 		9FB4EBA01F70F6AE0079123B /* RTDeviceHardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB4EB9F1F70F6AE0079123B /* RTDeviceHardware.m */; };
-		9FB4EBAA1F7203DA0079123B /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FB4EBA91F7203DA0079123B /* NextViewController.m */; };
 		9FF99CB81F0B31D9005FBCD6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF99CB71F0B31D9005FBCD6 /* AppDelegate.m */; };
-		9FF99CBB1F0B31D9005FBCD6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF99CBA1F0B31D9005FBCD6 /* ViewController.m */; };
+		9FF99CBB1F0B31D9005FBCD6 /* RTLargeTitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF99CBA1F0B31D9005FBCD6 /* RTLargeTitleViewController.m */; };
 		9FF99CBE1F0B31D9005FBCD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FF99CBC1F0B31D9005FBCD6 /* Main.storyboard */; };
 		9FF99CC01F0B31D9005FBCD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FF99CBF1F0B31D9005FBCD6 /* Assets.xcassets */; };
 		9FF99CC61F0B31D9005FBCD6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FF99CC51F0B31D9005FBCD6 /* main.m */; };
@@ -41,24 +43,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9F24E05F1F73525B00F82BDF /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
-		9F24E0601F73525B00F82BDF /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		9F24E05F1F73525B00F82BDF /* RTTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTTabBarController.h; sourceTree = "<group>"; };
+		9F24E0601F73525B00F82BDF /* RTTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTTabBarController.m; sourceTree = "<group>"; };
 		9F4000921F72623000FB03A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F4786F71F0B4788002AF3E3 /* RTNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTNavigationBar.h; sourceTree = "<group>"; };
 		9F4786F81F0B4788002AF3E3 /* RTNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTNavigationBar.m; sourceTree = "<group>"; };
-		9FA29B8B1F0B6BA200BF6454 /* OldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldViewController.h; sourceTree = "<group>"; };
-		9FA29B8C1F0B6BA200BF6454 /* OldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldViewController.m; sourceTree = "<group>"; };
-		9FA29B8E1F0B6BAE00BF6454 /* NewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
-		9FA29B8F1F0B6BAE00BF6454 /* NewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		9F90DAEB1F74C5840050C3C3 /* RTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTDetailViewController.m; sourceTree = "<group>"; };
+		9F90DAEC1F74C5840050C3C3 /* RTListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTListViewController.m; sourceTree = "<group>"; };
+		9F90DAED1F74C5840050C3C3 /* RTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTDetailViewController.h; sourceTree = "<group>"; };
+		9F90DAEE1F74C5840050C3C3 /* RTListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTListViewController.h; sourceTree = "<group>"; };
+		9F90DAF41F74C7F90050C3C3 /* RTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTBaseViewController.h; sourceTree = "<group>"; };
+		9F90DAF51F74C7F90050C3C3 /* RTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTBaseViewController.m; sourceTree = "<group>"; };
+		9FA29B8B1F0B6BA200BF6454 /* RTOldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTOldViewController.h; sourceTree = "<group>"; };
+		9FA29B8C1F0B6BA200BF6454 /* RTOldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTOldViewController.m; sourceTree = "<group>"; };
+		9FA29B8E1F0B6BAE00BF6454 /* RTNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTNewViewController.h; sourceTree = "<group>"; };
+		9FA29B8F1F0B6BAE00BF6454 /* RTNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTNewViewController.m; sourceTree = "<group>"; };
 		9FB4EB9E1F70F6AE0079123B /* RTDeviceHardware.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTDeviceHardware.h; sourceTree = "<group>"; };
 		9FB4EB9F1F70F6AE0079123B /* RTDeviceHardware.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTDeviceHardware.m; sourceTree = "<group>"; };
-		9FB4EBA81F7203DA0079123B /* NextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
-		9FB4EBA91F7203DA0079123B /* NextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		9FF99CB31F0B31D9005FBCD6 /* ios11NavBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios11NavBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FF99CB61F0B31D9005FBCD6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9FF99CB71F0B31D9005FBCD6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9FF99CB91F0B31D9005FBCD6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9FF99CBA1F0B31D9005FBCD6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9FF99CB91F0B31D9005FBCD6 /* RTLargeTitleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RTLargeTitleViewController.h; sourceTree = "<group>"; };
+		9FF99CBA1F0B31D9005FBCD6 /* RTLargeTitleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RTLargeTitleViewController.m; sourceTree = "<group>"; };
 		9FF99CBD1F0B31D9005FBCD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FF99CBF1F0B31D9005FBCD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9FF99CC41F0B31D9005FBCD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +102,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F90DAF11F74C6E40050C3C3 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				9FF99CBF1F0B31D9005FBCD6 /* Assets.xcassets */,
+				9F4000911F72623000FB03A8 /* LaunchScreen.storyboard */,
+				9FF99CBC1F0B31D9005FBCD6 /* Main.storyboard */,
+				9FF99CC41F0B31D9005FBCD6 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		9F90DAF21F74C6FC0050C3C3 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9FF99CB61F0B31D9005FBCD6 /* AppDelegate.h */,
+				9FF99CB71F0B31D9005FBCD6 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		9F90DAF31F74C70A0050C3C3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9F90DAF81F74C8320050C3C3 /* Base */,
+				9F90DAF91F74CB430050C3C3 /* VC */,
+				9F90DAFA1F74CB740050C3C3 /* Helper */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		9F90DAF81F74C8320050C3C3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9F24E05F1F73525B00F82BDF /* RTTabBarController.h */,
+				9F24E0601F73525B00F82BDF /* RTTabBarController.m */,
+				9F90DAF41F74C7F90050C3C3 /* RTBaseViewController.h */,
+				9F90DAF51F74C7F90050C3C3 /* RTBaseViewController.m */,
+				9F4786F71F0B4788002AF3E3 /* RTNavigationBar.h */,
+				9F4786F81F0B4788002AF3E3 /* RTNavigationBar.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9F90DAF91F74CB430050C3C3 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				9FA29B8E1F0B6BAE00BF6454 /* RTNewViewController.h */,
+				9FA29B8F1F0B6BAE00BF6454 /* RTNewViewController.m */,
+				9FA29B8B1F0B6BA200BF6454 /* RTOldViewController.h */,
+				9FA29B8C1F0B6BA200BF6454 /* RTOldViewController.m */,
+				9FF99CB91F0B31D9005FBCD6 /* RTLargeTitleViewController.h */,
+				9FF99CBA1F0B31D9005FBCD6 /* RTLargeTitleViewController.m */,
+				9F90DAEE1F74C5840050C3C3 /* RTListViewController.h */,
+				9F90DAEC1F74C5840050C3C3 /* RTListViewController.m */,
+				9F90DAED1F74C5840050C3C3 /* RTDetailViewController.h */,
+				9F90DAEB1F74C5840050C3C3 /* RTDetailViewController.m */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		9F90DAFA1F74CB740050C3C3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9FB4EB9E1F70F6AE0079123B /* RTDeviceHardware.h */,
+				9FB4EB9F1F70F6AE0079123B /* RTDeviceHardware.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		9FF99CAA1F0B31D9005FBCD6 = {
 			isa = PBXGroup;
 			children = (
@@ -119,26 +194,9 @@
 		9FF99CB51F0B31D9005FBCD6 /* ios11NavBar */ = {
 			isa = PBXGroup;
 			children = (
-				9FF99CB61F0B31D9005FBCD6 /* AppDelegate.h */,
-				9FF99CB71F0B31D9005FBCD6 /* AppDelegate.m */,
-				9F24E05F1F73525B00F82BDF /* TabBarController.h */,
-				9F24E0601F73525B00F82BDF /* TabBarController.m */,
-				9FF99CB91F0B31D9005FBCD6 /* ViewController.h */,
-				9FF99CBA1F0B31D9005FBCD6 /* ViewController.m */,
-				9FB4EBA81F7203DA0079123B /* NextViewController.h */,
-				9FB4EBA91F7203DA0079123B /* NextViewController.m */,
-				9FA29B8B1F0B6BA200BF6454 /* OldViewController.h */,
-				9FA29B8C1F0B6BA200BF6454 /* OldViewController.m */,
-				9FA29B8E1F0B6BAE00BF6454 /* NewViewController.h */,
-				9FA29B8F1F0B6BAE00BF6454 /* NewViewController.m */,
-				9F4786F71F0B4788002AF3E3 /* RTNavigationBar.h */,
-				9F4786F81F0B4788002AF3E3 /* RTNavigationBar.m */,
-				9FB4EB9E1F70F6AE0079123B /* RTDeviceHardware.h */,
-				9FB4EB9F1F70F6AE0079123B /* RTDeviceHardware.m */,
-				9FF99CBC1F0B31D9005FBCD6 /* Main.storyboard */,
-				9F4000911F72623000FB03A8 /* LaunchScreen.storyboard */,
-				9FF99CBF1F0B31D9005FBCD6 /* Assets.xcassets */,
-				9FF99CC41F0B31D9005FBCD6 /* Info.plist */,
+				9F90DAF21F74C6FC0050C3C3 /* AppDelegate */,
+				9F90DAF31F74C70A0050C3C3 /* Classes */,
+				9F90DAF11F74C6E40050C3C3 /* Resource */,
 				9FF99CC51F0B31D9005FBCD6 /* main.m */,
 			);
 			path = ios11NavBar;
@@ -147,8 +205,8 @@
 		9FF99CCE1F0B31D9005FBCD6 /* ios11NavBarTests */ = {
 			isa = PBXGroup;
 			children = (
-				9FF99CCF1F0B31D9005FBCD6 /* ios11NavBarTests.m */,
 				9FF99CD11F0B31D9005FBCD6 /* Info.plist */,
+				9FF99CCF1F0B31D9005FBCD6 /* ios11NavBarTests.m */,
 			);
 			path = ios11NavBarTests;
 			sourceTree = "<group>";
@@ -156,8 +214,8 @@
 		9FF99CD91F0B31DA005FBCD6 /* ios11NavBarUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9FF99CDA1F0B31DA005FBCD6 /* ios11NavBarUITests.m */,
 				9FF99CDC1F0B31DA005FBCD6 /* Info.plist */,
+				9FF99CDA1F0B31DA005FBCD6 /* ios11NavBarUITests.m */,
 			);
 			path = ios11NavBarUITests;
 			sourceTree = "<group>";
@@ -292,15 +350,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FF99CBB1F0B31D9005FBCD6 /* ViewController.m in Sources */,
+				9FF99CBB1F0B31D9005FBCD6 /* RTLargeTitleViewController.m in Sources */,
+				9F90DAEF1F74C5840050C3C3 /* RTDetailViewController.m in Sources */,
 				9FF99CC61F0B31D9005FBCD6 /* main.m in Sources */,
-				9FA29B8D1F0B6BA200BF6454 /* OldViewController.m in Sources */,
-				9F24E0611F73525B00F82BDF /* TabBarController.m in Sources */,
+				9FA29B8D1F0B6BA200BF6454 /* RTOldViewController.m in Sources */,
+				9F24E0611F73525B00F82BDF /* RTTabBarController.m in Sources */,
+				9F90DAF61F74C7F90050C3C3 /* RTBaseViewController.m in Sources */,
 				9FB4EBA01F70F6AE0079123B /* RTDeviceHardware.m in Sources */,
-				9FA29B901F0B6BAE00BF6454 /* NewViewController.m in Sources */,
-				9FB4EBAA1F7203DA0079123B /* NextViewController.m in Sources */,
+				9FA29B901F0B6BAE00BF6454 /* RTNewViewController.m in Sources */,
 				9FF99CB81F0B31D9005FBCD6 /* AppDelegate.m in Sources */,
 				9F4786F91F0B4788002AF3E3 /* RTNavigationBar.m in Sources */,
+				9F90DAF01F74C5840050C3C3 /* RTListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +402,7 @@
 				9F4000921F72623000FB03A8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		9FF99CBC1F0B31D9005FBCD6 /* Main.storyboard */ = {
@@ -350,6 +411,7 @@
 				9FF99CBD1F0B31D9005FBCD6 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -461,7 +523,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = GTDE2Y8A32;
-				INFOPLIST_FILE = ios11NavBar/Info.plist;
+				INFOPLIST_FILE = ios11NavBar/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uniqueness.ios11NavBar;
@@ -476,7 +538,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = GTDE2Y8A32;
-				INFOPLIST_FILE = ios11NavBar/Info.plist;
+				INFOPLIST_FILE = ios11NavBar/Resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uniqueness.ios11NavBar;

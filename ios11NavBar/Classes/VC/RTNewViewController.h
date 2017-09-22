@@ -1,13 +1,13 @@
 //
-//  OldViewController.h
+//  RTNewViewController.h
 //  ios11NavBar
 //
 //  Created by ColaBean on 2017/7/4.
 //  Copyright © 2017年 ColaBean. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "RTBaseViewController.h"
 
-@interface OldViewController : UIViewController
+@interface RTNewViewController : RTBaseViewController
 
 @end

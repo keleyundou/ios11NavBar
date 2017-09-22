@@ -1,23 +1,19 @@
 //
-//  NewViewController.m
+//  RTNewViewController.m
 //  ios11NavBar
 //
 //  Created by ColaBean on 2017/7/4.
 //  Copyright © 2017年 ColaBean. All rights reserved.
 //
 
-#import "NewViewController.h"
-#import "RTNavigationBar.h"
-#import "NextViewController.h"
+#import "RTNewViewController.h"
+#import "RTListViewController.h"
 
-@interface NewViewController ()
-{
-    UINavigationBar *nav;
-    UINavigationItem *navigationItem;
-}
+@interface RTNewViewController ()
+
 @end
 
-@implementation NewViewController
+@implementation RTNewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,13 +21,7 @@
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController setNavigationBarHidden:YES];
     self.view.backgroundColor = [UIColor brownColor];
-    nav = [RTNavigationBar defaultBar];
-    nav.backgroundColor = [UIColor redColor];
-    nav.barTintColor = [UIColor whiteColor];
-    
-    [self.view addSubview:nav];
-    
-    [self setupNavigationItem];
+    [self setNavTitle:@">=iOS11"];
 
     //crash.
 //    UIView *greenView = [UIView new];
@@ -60,8 +50,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UIViewController *vc = [[NextViewController alloc] init];
+
+- (IBAction)pushAction:(id)sender {
+    UIViewController *vc = [[RTListViewController alloc] init];
+    //TODO: 此处在iPhone X上运行会导致TabBar上移，解决方案：@RTTabBarController
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
 }
@@ -79,24 +71,6 @@
     } else {
         // Fallback on earlier versions
     }
-}
-
-- (void)setupNavigationItem {
-    //TODO: 给导航条添加Item
-    navigationItem = [[UINavigationItem alloc] initWithTitle:@">=iOS11"];
-    UIButton* left = [UIButton buttonWithType:UIButtonTypeCustom];
-    [left setFrame:CGRectMake(0, 0, 40, 40)];
-    [left setImage:[[UIImage imageNamed:@"common_btn_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
-    [left setImageEdgeInsets:UIEdgeInsetsMake(0, /*0*/-23, 0, 0)];
-    [left addTarget:self action:@selector(onBack:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem* leftBtn = [[UIBarButtonItem alloc] initWithCustomView:left];
-    [navigationItem setLeftBarButtonItem:leftBtn animated:NO];
-    
-    [nav pushNavigationItem:navigationItem animated:NO];
-}
-
-- (void)onBack:(UIButton *)sender {
-    NSLog(@"touch onBack");
 }
 
 /*

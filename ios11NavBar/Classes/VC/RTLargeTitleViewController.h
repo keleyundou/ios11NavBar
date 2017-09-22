@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RTLargeTitleViewController.h
 //  ios11NavBar
 //
 //  Created by ColaBean on 2017/7/4.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface RTLargeTitleViewController : UIViewController
 
 
 @end
