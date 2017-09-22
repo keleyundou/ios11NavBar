@@ -12,7 +12,7 @@
 #import "RTListViewController.h"
 #import "RTDetailViewController.h"
 
-@interface RTListViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface RTListViewController ()<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
 @end
 
@@ -32,12 +32,21 @@
     // Do any additional setup after loading the view.
     [self setNavTitle:@"list"];
     [self.view addSubview:self.tableView];
-    [self updateData];
+    
+    [self fixOffset];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)fixOffset {
+    if (@available(iOS 11.0, *)) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // Fallback on earlier versions
+    }
 }
 
 #pragma mark 👉 UITableViewDataSource
@@ -77,10 +86,22 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"%@", NSStringFromCGPoint(self.tableView.contentOffset));
+}
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     [self resetFrame:self.view.frame];
+}
+
+- (void)viewSafeAreaInsetsDidChange {
+    [super viewSafeAreaInsetsDidChange];
+    if (@available(iOS 11.0, *)) {
+        NSLog(@"viewSafeAreaInsetsDidChange:%@", NSStringFromUIEdgeInsets(self.view.safeAreaInsets));
+    } else {
+        // Fallback on earlier versions
+    }
 }
 
 - (void)resetFrame:(CGRect)frame {

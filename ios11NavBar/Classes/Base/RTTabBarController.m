@@ -20,7 +20,7 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    //TODO: adapt tabbar's y value.
+    //TODO: modify tabbar's y value.
     if ([RTDeviceHardware iPhoneXDevice]) {
         CGFloat deltaTabBarY = SCREEN_HEIGHT - CGRectGetHeight(self.tabBar.frame);
         self.tabBar.frame = (CGRect){0, deltaTabBarY, self.tabBar.bounds.size};
