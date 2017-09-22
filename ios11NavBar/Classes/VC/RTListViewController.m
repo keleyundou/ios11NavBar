@@ -90,31 +90,11 @@
     NSLog(@"%@", NSStringFromCGPoint(self.tableView.contentOffset));
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    [self resetFrame:self.view.frame];
-}
-
-- (void)viewSafeAreaInsetsDidChange {
-    [super viewSafeAreaInsetsDidChange];
-    if (@available(iOS 11.0, *)) {
-        NSLog(@"viewSafeAreaInsetsDidChange:%@", NSStringFromUIEdgeInsets(self.view.safeAreaInsets));
-    } else {
-        // Fallback on earlier versions
-    }
-}
-
-- (void)resetFrame:(CGRect)frame {
-    self.view.frame = frame;
-    if (self.tableView) {
-        self.tableView.frame = (CGRect){0, self.navMaxY, CGRectGetWidth(self.view.bounds), self.view.bounds.size.height-self.navMaxY};
-    }
-}
-
 #pragma mark 👉 getter
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        CGRect tableRect = (CGRect){0, self.navMaxY, CGRectGetWidth(self.view.bounds), self.view.bounds.size.height-self.navMaxY};
+        _tableView = [[UITableView alloc] initWithFrame:tableRect style:UITableViewStyleGrouped];
         UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), 0.1)];
         //TODO: iOS 11之后，预估值有默认高度，如果不需要就设置0
         _tableView.estimatedRowHeight = 0;//这里需要吐槽下，如果不设置为0 就会出现刷新后偏移问题。
